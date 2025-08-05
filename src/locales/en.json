@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome to our platform!",
+  "login": "Login",
+  "logout": "Logout",
+  "dashboard": "Dashboard",
+  "settings": "Settings",
+  "save": "Save",
+  "cancel": "Cancel",
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email"
+  },
+  "notifications": {
+    "success": "Operation completed successfully!",
+    "error": "An error occurred!"
+  }
+}

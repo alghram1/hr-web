@@ -1,0 +1,52 @@
+﻿.leave-circle-container {
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.leave-circle-ring {
+    width: 160px;
+    height: 160px;
+    border: 10px solid #eee;
+    border-top-color: var(--circle-color, #02365B); // ✅ كحلي بدل الأخضر
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #f9f9f9;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.leave-circle-center {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    color: #02365B; // ✅ نص كحلي متناسق مع الدائرة
+}
+
+.leave-circle-wrapper {
+    transition: all 0.4s ease;
+}
+
+.leave-circle-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    .leave-circle-ring {
+        border-top-color: #00BAC6 !important; // ✅ عند التفاعل – تركوازي
+    }
+
+    .leave-circle-center {
+        color: #00BAC6 !important;
+    }
+}
+
+/* تأثير بصري على دوائر SVG */
+svg circle {
+    transition: all 0.3s ease-in-out;
+}
+
+svg:hover circle:nth-child(2) {
+    filter: drop-shadow(0 0 4px rgba(0, 186, 198, 0.3)); // ✅ ظل تركوازي
+}

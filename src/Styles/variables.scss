@@ -1,0 +1,169 @@
+﻿// ------------------------------------
+// 🎨 الهوية البصرية – OroomUnit Theme
+// ------------------------------------
+
+// ✅ الألوان الأساسية - الهوية الجديدة
+$primary-color: #02365B; // كحلي – اللون الأساسي الرسمي
+$primary-hover: #00BAC6; // تركوازي – لون التفاعل والهوفر
+$primary-light: lighten($primary-color, 40%);
+
+// ✅ الألوان الثانوية
+$secondary-color: #6f42c1;
+$secondary-light: lighten($secondary-color, 30%);
+
+// ✅ ألوان خلفيات وحدود رمادية
+$gray-bg: #f1f3f5;
+$gray-border: #dee2e6;
+$gray-dark: #adb5bd;
+
+// ✅ ألوان نصوص
+$text-dark: #212529;
+$text-light: #ffffff;
+
+// ✅ ألوان تحذيرية / نجاح / خطأ
+$success-color: $primary-hover;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$info-color: #0dcaf0;
+
+// ✅ ألوان خلفيات ناعمة
+$soft-success: lighten($primary-hover, 45%); // خلفية تركوازية هادئة
+$soft-warning: #fff3cd;
+$soft-danger: #f8d7da;
+$soft-info: #cff4fc;
+
+// ✅ قياسات ومكونات
+$sidebar-width: 80px;
+$subsidebar-width: 220px;
+$border-radius: 10px;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+$box-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+// ------------------------------------
+// 🎨 تخصيص Bootstrap Theme Colors
+// ------------------------------------
+$theme-colors: ( "primary": $primary-color, "secondary": $secondary-color, "success": $success-color, "warning": $warning-color, "danger": $danger-color, "info": $info-color, "light": $gray-bg, "dark": #343a40 );
+
+// ------------------------------------
+// 🎯 أزرار AI وواجهات تفاعلية
+// ------------------------------------
+.oroom-ai-button {
+    background: linear-gradient(135deg, $primary-color, $primary-hover);
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, $primary-hover, $primary-color);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// ------------------------------------
+// 🌐 عناصر جانبية / سايدبار
+// ------------------------------------
+.active-sidebar-item {
+    background-color: $primary-hover;
+    color: #fff !important;
+    border-radius: 6px;
+    padding: 4px 0px;
+}
+
+// ------------------------------------
+// 📜 Scrollbars – مطابقة الهوية
+// ------------------------------------
+.posts-container {
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color #f1f1f1;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+// ------------------------------------
+// 🌟 Utilities – ألوان حسب الهوية
+// ------------------------------------
+.text-primary-brand {
+    color: $primary-color !important;
+}
+
+.text-accent-brand {
+    color: $primary-hover !important;
+}
+
+.bg-primary-brand {
+    background-color: $primary-color !important;
+    color: #fff;
+}
+
+.bg-accent-brand {
+    background-color: $primary-hover !important;
+    color: #fff;
+}
+
+// ------------------------------------
+// 👥 صفحة الموظفين
+// ------------------------------------
+.employees-page {
+    background-color: #f8f9fa;
+
+    .progress-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .progress {
+        width: 60px;
+        height: 8px;
+        background-color: #e9ecef;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .progress-bar {
+            transition: width 0.3s ease-in-out;
+            background-color: $primary-hover; // تركوازي
+        }
+    }
+
+    .table td,
+    .table th {
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+
+
+.custom-tab .nav-link.active {
+    background-color: #00BAC6 !important; // ← اللون accent من theme
+    color: #fff !important;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+

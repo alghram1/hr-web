@@ -1,0 +1,133 @@
+﻿// Styles/TaskManager.scss
+
+// 💡 الهوية البصرية - OroomUnit
+$primary-color: #02365B; // ✅ كحلي
+$accent-color: #00BAC6; // ✅ تركوازي تفاعلي
+$light-gray: #f9f9f9;
+$border-light: #dee2e6;
+$muted-text: #6c757d;
+
+// ✅ صناديق الإحصائيات
+.stat-box {
+    background-color: $light-gray;
+    border: 1px solid $border-light;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: lighten($light-gray, 3%);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .value {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $primary-color; // ✅ الكحلي
+    }
+
+    .label {
+        font-size: 0.9rem;
+        color: $muted-text;
+    }
+}
+
+// ✅ جدول المهام
+.task-table {
+    thead {
+        background-color: #f8f9fa;
+
+        th {
+            font-weight: 600;
+            color: $primary-color;
+            text-align: center;
+        }
+    }
+
+    td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .status-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.3rem;
+        font-weight: 500;
+
+        &.overdue {
+            background-color: #f8d7da;
+            color: #842029;
+        }
+
+        &.today {
+            background-color: #fff3cd;
+            color: #664d03;
+        }
+
+        &.unassigned {
+            background-color: #e2e3e5;
+            color: #41464b;
+        }
+
+        &.ontrack {
+            background-color: lighten($accent-color, 35%);
+            color: darken($accent-color, 25%);
+        }
+    }
+}
+
+// ✅ أزرار مخصصة
+.btn-accent {
+    background-color: $accent-color;
+    border: none;
+    color: #fff;
+
+    &:hover {
+        background-color: darken($accent-color, 5%);
+    }
+}
+
+.btn-outline-primary {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        color: #fff;
+    }
+}
+
+// ✅ شريط الفلترة والبحث
+.filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+
+    .form-select, .form-control {
+        min-width: 200px;
+    }
+}
+
+// ✅ زر الإضافة العائم (Floating Action Button)
+.fab-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 52px;
+    height: 52px;
+    background-color: $accent-color;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+
+    svg {
+        color: white;
+        font-size: 24px;
+    }
+
+    &:hover {
+        background-color: darken($accent-color, 6%);
+    }
+}

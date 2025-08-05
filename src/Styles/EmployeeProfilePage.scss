@@ -1,0 +1,114 @@
+﻿/* 🔖 تبويبات مخصصة */
+/* 🎨 تبويبات مخصصة بلون الهوية */
+.custom-tab {
+    font-weight: 600;
+    font-size: 13.5px;
+    padding: 0.75rem 1.25rem;
+    color: #495057;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-tab:hover {
+    color: #00BAC6;
+    background-color: #f8f9fa;
+}
+
+.custom-tab.active {
+    color: #00BAC6 !important;
+    border-bottom: 3px solid #00BAC6 !important;
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+
+
+
+/* 🖼️ زر تعديل الصورة الرمزية */
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #f1f3f5;
+    }
+}
+
+/* 📅 زر الإجازات في بروفايل الموظف */
+.custom-leave-btn {
+    --bs-btn-border-color: #02365B;
+    --bs-btn-color: #02365B;
+    --bs-btn-hover-bg: #02365B;
+    --bs-btn-hover-border-color: #02365B;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-bg: #00BAC6;
+    --bs-btn-active-border-color: #00BAC6;
+    --bs-btn-active-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 🎯 جدول الأهداف */
+.goals-table {
+    th, td {
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    thead th {
+        font-weight: 600;
+        font-size: 13px;
+        background-color: #f8f9fa;
+    }
+
+    tbody tr:hover {
+        background-color: #f0f4f8; // ✅ هوفر بلون كحلي فاتح
+    }
+
+    tfoot td {
+        background-color: #fdfdfe;
+        font-size: 14px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        border-top: 2px solid #dee2e6;
+    }
+
+    .text-success {
+        color: #00BAC6 !important; // ✅ تركوازي – للإيجابيات
+    }
+
+    .text-danger {
+        color: #dc3545 !important; // ✅ ثابت للسلبيات
+    }
+}
+
+/* ⏰ مكون تعديل وقت الحضور */
+.custom-timepicker {
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Arial', sans-serif !important;
+    font-size: 1rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    padding: 0.4rem 0.75rem;
+}
+
+.custom-timepicker input {
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Arial', sans-serif !important;
+    unicode-bidi: plaintext !important;
+    font-variant-numeric: lining-nums !important;
+    font-feature-settings: 'lnum' !important;
+}

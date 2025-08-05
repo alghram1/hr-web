@@ -1,0 +1,178 @@
+﻿:root {
+    --brand-color: #02365B; // ✅ كحلي أساسي
+    --brand-color-hover: #00BAC6; // ✅ تركوازي للتفاعل
+}
+
+
+.smart-table {
+    width: 100%;
+    font-size: 0.95rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    thead {
+        background: linear-gradient(to right, var(--brand-color), var(--brand-color-hover));
+        color: white;
+
+        th {
+            padding: 0.9rem 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            border-bottom: 2px solid var(--brand-color-hover);
+
+            &.sortable {
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: '⇅';
+                    font-size: 0.7rem;
+                    position: absolute;
+                    right: 0.5rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    opacity: 0.5;
+                }
+            }
+
+            @media (max-width: 768px) {
+                font-size: 0.75rem;
+                padding: 0.6rem 0.4rem;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: #f1fdf3;
+            }
+
+            td {
+                color: #444;
+                font-size: 0.85rem;
+                padding: 0.75rem 0.8rem;
+                text-align: center;
+                white-space: nowrap;
+                border-bottom: 1px solid #eee;
+
+                @media (max-width: 768px) {
+                    font-size: 0.75rem;
+                    padding: 0.6rem 0.4rem;
+                }
+
+                &.text-success {
+                    color: var(--brand-color);
+                    font-weight: 600;
+                }
+
+                &.text-danger {
+                    color: #dc3545;
+                    font-weight: 600;
+                }
+
+                &.badge-cell {
+                    padding: 0.4rem !important;
+                }
+            }
+        }
+    }
+
+    .smart-table-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+
+        button,
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            white-space: nowrap;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.8rem;
+
+            @media (max-width: 576px) {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.5rem;
+            }
+
+            svg {
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    .btn-brand {
+        background-color: var(--brand-color);
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 0.3rem 0.75rem;
+
+        &:hover {
+            background-color: var(--brand-color-hover);
+            color: white;
+        }
+
+        svg {
+            font-size: 0.9rem;
+        }
+    }
+
+    .employee-link {
+        color: var(--brand-color);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .profile-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    th, td {
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    tr {
+        td, th {
+            border: none !important;
+        }
+    }
+
+    .checkbox-custom {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        border: 2px solid var(--brand-color);
+        background-color: #fff;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+
+        &.checked-custom {
+            background-color: var(--brand-color);
+            border-color: var(--brand-color);
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><path d='M13.485 1.929l-7.07 7.07-3.071-3.07-1.414 1.413 4.485 4.486 8.485-8.485z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+        }
+    }
+}
