@@ -1,0 +1,64 @@
+﻿######################################################
+# 🌐 GitIgnore شامل لـ ASP.NET Core + React Projects
+######################################################
+
+# ====== ⛔️ ملفات النظام
+.DS_Store
+Thumbs.db
+
+# ====== ⚙️ ملفات Visual Studio
+.vs/
+*.user
+*.suo
+*.sdf
+*.dbmdl
+*.cache
+
+# ====== 🏗️ ملفات البناء (Build Outputs)
+bin/
+obj/
+out/
+*.pdb
+*.log
+*.mdb
+*.bak
+
+# ====== 🧪 ملفات الاختبار
+TestResults/
+*.testsettings
+*.vsmdi
+
+# ====== 📦 NuGet & Package Manager
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# ====== ⚛️ ملفات React / Node
+node_modules/
+build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# ====== 🔐 ملفات البيئة
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ====== 📊 ملفات التغطية (Coverage)
+coverage/
+
+# ====== 🔧 إعدادات خاصة أخرى
+*.tsbuildinfo
+*.tgz
+*.sln.docstates
+.idea/
+*.swp
+
+# ====== 💻 إعدادات Git نفسها
+.git/
